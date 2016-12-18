@@ -6,23 +6,26 @@ var unAnswered = 0;
 
 //Functions 
 
+//creates timer
 function countdown(){
 
 	var seconds = 10;
 	//alert("countdown")
 	tick();
 
+//also creates ther timer 
 function tick(){
 		//alert("tick function");
 		seconds--;
 		$("#timer").html("Time Remaining: " + seconds);
-		if(seconds > 0){
+		if((seconds > 0) || ($("#answers").is(':visible'))){
 			setTimeout(tick, 1000);
 		}
 		else{ answerPage()}
 }
 }
 
+//tallies then displays answers 
 function answerPage(){
 
 	if(!$("input[name=inlineRadioOptions]:checked").val())
@@ -68,12 +71,14 @@ function answerPage(){
 }
 //Main Process 
 
+//launches game when start is clicked 
 $("#startb").click(function(){
 	$("#start").addClass("hidden");
 	$("#triviaGame").removeClass("hidden");
 	countdown();
 }); 
 
+//shows results when done is clicked 
 $("#doneb").click(function(){
 	
 	answerPage();
