@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-2.2.3.js"></script> 
+	<title>Triva Game</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300" rel="stylesheet">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 	<style>
+  	
+.jumbotron{
+
+font-family: 'Open Sans Condensed', sans-serif;
+background-color: #78a5ed;
+color: #fff;
+padding: 25px 25px;
+margin-left: 75px;
+margin-right: 75px;	
+}
+
+#searchBox {
+
+margin-left: 75px;
+margin-right: 75px;
+
+}
+
+* {
+
+font-family: 'Open Sans', sans-serif;
+
+}
+
+.show {
+  display: block !important;
+}
+.hidden {
+  display: none !important;
+}
+
+	</style>
+</head>
+
+<body>
+	
+<div class="jumbotron text-center"><h1>UNC Basketball Trivia Game!</h1></div>
+
+
+
+<div id="start"> 
+	<p class="text-center">
+ 	<button id=startb type="button" class="btn btn-primary btn-lg">Start</button>
+	</p>
+</div>
+
+<div id="triviaGame" class="hidden">
+
+	<div id="timer">Time Remaining: </div>
+
+	<section id="qestionAndAnswers">
+
+		<class id="questions"><h3>When did North Carolina win its first National Championship?</h3></class>
+
+		<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option11"> 	1924
+		</label>
+		<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option12"> 	1937
+		</label>
+		<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option13"> 	1956
+		</label>
+		<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option14"> 	1929
+		</label>
+
+		<class id="questions"><h3>Who is Carolina's all-time leader in total assists in a career?</h3></class>
+
+		<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="option21"> Larry Brown
+		</label>
+		<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option22"> Ed Qota 
+			</label>
+			<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="option23"> Phill Ford 
+			</label>
+			<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio4" value="option24"> Kendall Marshall 
+			</label>
+		
+		<class id="questions"><h3>Who was never a UNC basketball Coach?</h3></class>
+
+		<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option31"> Roy Williams 
+		</label>
+		<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="option32"> Bill Guthridge 
+			</label>
+			<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="option33"> Frank Murphey 
+			</label>
+			<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio4" value="option34"> Dean Smith 
+			</label>
+
+		<class id="questions"><h3>When did the Smith Center open?</h3></class>
+
+		<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio1" value="option41"> 1988
+			</label>
+			<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio2" value="option42"> 1992
+			</label>
+			<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio3" value="option43"> 1984
+			</label>
+			<label class="form-check-inline">
+			  <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio4" value="option44"> 1986
+			</label>
+			
+	</section>
+
+	<p class="text-center">
+ 	<button id="doneb" type="button" class="btn btn-primary btn-lg">Done</button>
+	</p>
+
+</div>
+
+<div id="answers" class="hidden">
+
+	<p id="correct"></p>
+	<p id="incorrect"></p>
+	<p id="unanswered"></p>
+
+</div>
+
+<script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
